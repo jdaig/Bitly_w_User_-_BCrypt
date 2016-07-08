@@ -1,0 +1,30 @@
+<h1>Bienvenido a Fake Bitly!</h1>
+  <p>Esta es una aplicacion para cortar urls</p><br>
+  <p>Elige la opcion que requieras:</p>
+
+  <p><%= session[:email] %> </p>
+  <p><%= session[:user_name] %> </p>
+  <p id="html"></p>
+
+  <% if @bulean %>
+  <p style="color:green">Usuario registrado</p>
+  <% @bulean = false %>
+  <%end %>
+   <% if @bulean2 %>
+  <p style="color:red">Logout Efectuado</p>
+  <% @bulean2 = false %>
+  <%end %>
+  <form action="/send_url" method="get">
+    <input type="submit" value="Send Url">
+    <br> 
+  </form>
+
+  <form action="/join_us" method="get">
+    <input type="submit" value="Join!">
+    <br> 
+  </form>
+
+  <form action="/join" method="get">
+    <input type="submit" value="Login">
+    <br> 
+  </form>
